@@ -1,0 +1,20 @@
+<h1>Registrierung</h1>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label>
+    Benutzername:
+    <input type="text" formControlName="username" required>
+  </label>
+
+  <label>
+    E-Mail:
+    <input type="text" formControlName="email" required>
+  </label>
+
+  <label>
+    Passwort:
+    <input type="password" formControlName="password" required>
+  </label>
+
+  <button type="submit" [disabled]="!registerForm.valid">Registrieren</button>
+</form>
