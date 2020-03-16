@@ -17,9 +17,13 @@
     color: white;
 
     min-width: 610px;
-    min-height: 700px;
+    min-height: 610px;
 
     background: rgba(0, 0, 0, 0.5);
+
+    mat-form-field {
+      width: 400px;
+    }
 
     #header {
       margin-top: 60px;
@@ -38,5 +42,17 @@
         color: rgba(248, 233, 194);
       }
     }
+
+    button {
+      background-color: rgba(140, 117, 27);
+    }
   }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  color: rgba(248, 233, 194) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  background-color: rgba(248, 233, 194) !important;
 }

@@ -1,4 +1,4 @@
-import {Body, Controller, Post} from "@nestjs/common";
+import {Body, Controller, Get, Post} from "@nestjs/common";
 import {UserRegistrationDto} from "./user-registration.dto";
 import {ManagementClient} from "auth0";
 import {UserDto} from "./user.dto";
@@ -21,6 +21,7 @@ export class RegisterController {
                     return user;
                 })
             .catch(err => {
+                console.log('LOL' + err);
                 return err;
             });
     }

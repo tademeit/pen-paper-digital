@@ -1,6 +1,8 @@
 export class UserRegistrationDto {
-    username: string;
-    email: string;
-    password: string;
-    connection: string;
+    constructor(
+        public username: string,
+        public email: string,
+        public password: string,
+        public connection: string = 'Username-Password-Authentication'
+    ) {}
 }
