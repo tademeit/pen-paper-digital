@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from "@nestjs/common";
+import {Body, Controller, HttpException, Post} from "@nestjs/common";
 import { ManagementClient } from "auth0";
 
 import { UserRegistration } from '@ppd/api-interfaces';
@@ -21,7 +21,10 @@ export class RegisterController {
         return user;
       })
       .catch(err => {
-        return err;
+        throw new HttpException({
+          status: err['statusCode'],
+          error: err.message
+        }, err['statusCode']);
       });
   }
 
