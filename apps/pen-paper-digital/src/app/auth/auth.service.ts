@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import { ConnectionTypes, UserRegistration } from '@ppd/api-interfaces';
+import {UserRegistration} from '@ppd/api-interfaces';
+import {Injectable} from "@angular/core";
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +12,9 @@ export class AuthService {
   register(userRegistration: UserRegistration) {
     const url = 'http://localhost:3000/api/register';
 
-    userRegistration = {
-      username: 'timonohe',
-      email: 'timo.nohe@gmx.de',
-      password: 'kingdomhearts91!',
-      connection: ConnectionTypes.UsernamePassword
-    };
-
-    this.http.post(url, userRegistration).subscribe(resp => console.log(resp));
+    return this.http.post(url, userRegistration).subscribe(
+      resp => resp,
+      error => error
+    );
   }
 }

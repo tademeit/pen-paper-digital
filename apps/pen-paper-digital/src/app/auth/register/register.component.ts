@@ -28,13 +28,7 @@ export class RegisterComponent {
       connection: ConnectionTypes.UsernamePassword
     };
 
-    this.userService.register(userRegistration)
-      .subscribe(
-        (user: UserDto) => console.log(user.user_id),
-        (error) => {
-          this.error = error
-        }
-      );
+    this.userService.register(userRegistration);
   }
 
 }

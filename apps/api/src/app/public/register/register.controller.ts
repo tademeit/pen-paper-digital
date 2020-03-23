@@ -21,7 +21,6 @@ export class RegisterController {
         return user;
       })
       .catch(err => {
-        console.log('LOL' + err);
         return err;
       });
   }
