@@ -1,75 +1,84 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Ppd
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project was generated using [Nx](https://nx.dev).
 
-## Description
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Installation
+## Quick Start & Documentation
 
-```bash
-$ npm install
-```
+[Nx Documentation](https://nx.dev/angular)
 
-## Running the app
+[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
-```bash
-# development
-$ npm run start
+[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
 
-# watch mode
-$ npm run start:dev
+## Adding capabilities to your workspace
 
-# production mode
-$ npm run start:prod
-```
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-## Test
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-```bash
-# unit tests
-$ npm run test
+Below are some plugins which you can add to your workspace:
 
-# e2e tests
-$ npm run test:e2e
+- [Angular](https://angular.io)
+  - `ng add @nrwl/angular`
+- [React](https://reactjs.org)
+  - `ng add @nrwl/react`
+- Web (no framework frontends)
+  - `ng add @nrwl/web`
+- [Nest](https://nestjs.com)
+  - `ng add @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `ng add @nrwl/express`
+- [Node](https://nodejs.org)
+  - `ng add @nrwl/node`
 
-# test coverage
-$ npm run test:cov
-```
+## Generate an application
 
-## Support
+Run `ng g @nrwl/angular:app my-app` to generate an application.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+> You can use any of the plugins above to generate applications as well.
 
-## Stay in touch
+When using Nx, you can create multiple applications and libraries in the same workspace.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Generate a library
 
-## License
+Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
-  Nest is [MIT licensed](LICENSE).
+> You can also use any of the plugins above to generate libraries as well.
+
+Libraries are sharable across libraries and applications. They can be imported from `@ppd/mylib`.
+
+## Development server
+
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng g component my-component --project=my-app` to generate a new component.
+
+## Build
+
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+
+Run `nx affected:test` to execute the unit tests affected by a change.
+
+## Running end-to-end tests
+
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+
+## Understand your workspace
+
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+
+## Further help
+
+Visit the [Nx Documentation](https://nx.dev/angular) to learn more.

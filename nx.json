@@ -1,0 +1,28 @@
+{
+  "npmScope": "ppd",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "pen-paper-digital": {
+      "tags": []
+    },
+    "pen-paper-digital-e2e": {
+      "tags": [],
+      "implicitDependencies": ["pen-paper-digital"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}

@@ -1,0 +1,58 @@
+#registration-page {
+  height: 100%;
+  width: 100%;
+
+  background-image: url('/assets/public-background.jpg');
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #registration-form {
+    align-self: start;
+
+    text-align: center;
+    color: white;
+
+    min-width: 610px;
+    min-height: 610px;
+
+    background: var(--color-background-transparent);
+
+    .letter-spacing {
+      letter-spacing: 5px;
+    }
+
+    mat-form-field {
+      width: 400px;
+    }
+
+    #header {
+      margin-top: 60px;
+      margin-bottom: 80px;
+
+
+      h1 {
+        font-size: 72px;
+        font-weight: normal;
+        letter-spacing: 5px;
+        margin-bottom: 0;
+        line-height: 56px;
+        color: var(--color-text);
+        text-shadow: var(--shadow-base);
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: normal;
+        letter-spacing: 4px;
+        margin-top: 0;
+        text-shadow: var(--shadow-base);
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+    }
+  }
+}
