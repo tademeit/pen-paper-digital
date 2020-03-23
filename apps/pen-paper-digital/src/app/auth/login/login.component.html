@@ -1,0 +1,29 @@
+<div id="login-page">
+  <div id="login-form">
+    <div id="header">
+      <h1>Pen&Paper</h1>
+      <h2>Digital</h2>
+    </div>
+
+    <h1 class="letter-spacing">Login</h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field color="accent" class="flex-direction-column">
+          <mat-label>Benutzername</mat-label>
+          <input matInput formControlName="username" autocomplete="off">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field color="accent" class="flex-direction-column">
+          <mat-label>Passwort</mat-label>
+          <input matInput type="password" formControlName="password" autocomplete="off">
+        </mat-form-field>
+      </div>
+
+      <button class="margin-right" mat-raised-button color="primary" type="submit">Einloggen</button>
+      <button mat-raised-button color="primary" (click)="navigateToRegistration()">Registrieren</button>
+    </form>
+  </div>
+</div>

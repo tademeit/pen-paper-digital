@@ -6,11 +6,6 @@
       <h2>Digital</h2>
     </div>
 
-    <div *ngIf="error">
-      <h1 class="letter-spacing">Error</h1>
-      <span>{{error}}</span>
-    </div>
-
     <h1 class="letter-spacing">Registrieren</h1>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">

@@ -7,7 +7,7 @@ import { UserRegistration } from '@ppd/api-interfaces';
 export class RegisterController {
 
   @Post()
-  async registerUser(@Body() userRegistration: UserRegistration): Promise<any> {
+  async registerUser(@Body() userRegistration: UserRegistration) {
     const managementClient = new ManagementClient({
       domain: 'test-penpaperdigital.eu.auth0.com',
       clientId: 'yS4hUWPXOXyvJyvMC607saRLKXbC83E8',

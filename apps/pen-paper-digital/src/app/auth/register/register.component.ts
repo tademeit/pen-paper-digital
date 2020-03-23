@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {AuthService} from "../auth.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import { ConnectionTypes, UserRegistration } from "@ppd/api-interfaces";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'ppd-register',
@@ -10,15 +11,13 @@ import { ConnectionTypes, UserRegistration } from "@ppd/api-interfaces";
 })
 export class RegisterComponent {
 
-  error: Error;
-
   registerForm = new FormGroup({
     username: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
 
-  constructor(private userService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit(): void {
     const userRegistration: UserRegistration = {
@@ -28,7 +27,14 @@ export class RegisterComponent {
       connection: ConnectionTypes.UsernamePassword
     };
 
-    this.userService.register(userRegistration);
+    this.authService.register(userRegistration).subscribe(
+      (response) => {
+        return this.router.navigate(['/login']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

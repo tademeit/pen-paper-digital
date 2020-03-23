@@ -11,3 +11,37 @@ body {
   font-family: 'Marcellus SC', serif;
   color: #FFF;
 }
+
+#header {
+  margin-top: 60px;
+  margin-bottom: 80px;
+
+
+  h1 {
+    font-size: 72px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    line-height: 56px;
+    color: var(--color-text);
+    text-shadow: var(--shadow-base);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin-top: 0;
+    text-shadow: var(--shadow-base);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+}
+
+.letter-spacing {
+  letter-spacing: 5px;
+}
+
+.margin-right {
+  margin-right: 10px !important;
+}

@@ -1,4 +1,4 @@
-#registration-page {
+#login-page {
   height: 100%;
   width: 100%;
 
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  #registration-form {
+  #login-form {
     align-self: start;
 
     text-align: center;
@@ -23,6 +23,10 @@
 
     mat-form-field {
       width: 400px;
+    }
+
+    button:first-child {
+      margin-right: 10px;
     }
   }
 }
