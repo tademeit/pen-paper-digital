@@ -1,13 +1,12 @@
-import {Body, Controller, Get, Post} from "@nestjs/common";
+import {Body, Controller, HttpException, Post} from "@nestjs/common";
 import {UserRegistrationDto} from "./user-registration.dto";
 import {ManagementClient} from "auth0";
-import {UserDto} from "./user.dto";
 
 @Controller('register')
 export class RegisterController {
 
     @Post()
-    async registerUser(@Body() userRegistration: UserRegistrationDto): Promise<any> {
+    registerUser(@Body() userRegistration: UserRegistrationDto) {
         const managementClient = new ManagementClient({
             domain: 'test-penpaperdigital.eu.auth0.com',
             clientId: 'yS4hUWPXOXyvJyvMC607saRLKXbC83E8',
@@ -15,15 +14,17 @@ export class RegisterController {
             scope: 'read:users'
         });
 
-        return managementClient
-                .createUser(userRegistration)
-                .then((user: UserDto) => {
-                    return user;
-                })
-            .catch(err => {
-                console.log('LOL' + err);
-                return err;
+        return managementClient.createUser(userRegistration)
+            .catch(error => {
+               return new HttpException(this.getErrorMessage(error), error['statusCode']);
             });
     }
 
+    private getErrorMessage(error: Error) {
+        if (error['statuscode'] === 409) {
+            return 'Es existiert bereits ein Benutzer mit dieser E-Mail-Adresse';
+        } else {
+            return error.message;
+        }
+    }
 }

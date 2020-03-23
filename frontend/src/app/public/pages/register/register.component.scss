@@ -21,6 +21,10 @@
 
     background: rgba(0, 0, 0, 0.5);
 
+    .letter-spacing {
+      letter-spacing: 5px;
+    }
+
     mat-form-field {
       width: 400px;
     }
