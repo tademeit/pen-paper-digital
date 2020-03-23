@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+@import "variables";
+
+$ppd-typography: mat-typography-config(
+  $font-family: 'Marcellus SC'
+);
+
+$ppd-primary-palette: mat-palette($ppd-primary);
+$ppd-accent-palette: mat-palette($ppd-accent);
+
+$ppd-theme: mat-dark-theme($ppd-primary-palette, $ppd-accent-palette);
+
+@include mat-core($ppd-typography);
+@include angular-material-theme($ppd-theme);
+
+
+.mat-input-element {
+  text-shadow: var(--shadow-text);
+}
