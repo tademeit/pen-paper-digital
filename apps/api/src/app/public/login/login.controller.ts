@@ -1,5 +1,5 @@
 import {Body, Controller, HttpException, Post} from "@nestjs/common";
-import {UserLogin} from "../../../../../../libs/api-interfaces/src/lib/user-login.model";
+import {UserLogin} from "@ppd/api-interfaces";
 import {AuthenticationClient} from "auth0";
 import {ConnectionTypes} from "@ppd/api-interfaces";
 
