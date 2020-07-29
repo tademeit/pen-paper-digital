@@ -45,7 +45,7 @@
     "@nestjs/passport": "^7.0.0",
     "@nestjs/platform-express": "^6.8.3",
     "@nrwl/angular": "9.1.2",
-    "auth0": "^2.24.0",
+    "auth0": "^2.27.1",
     "core-js": "^2.5.4",
     "mongoose": "^5.9.5",
     "passport": "^0.4.1",
